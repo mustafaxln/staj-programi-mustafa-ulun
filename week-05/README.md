@@ -1,0 +1,4 @@
+- ne yaptim
+- nasil calistirilir
+- ne ogrendim
+- nerede takildim
