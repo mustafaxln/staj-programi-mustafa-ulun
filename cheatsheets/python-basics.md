@@ -45,13 +45,53 @@ else:
     print("Hatali secim yaptiniz!")
 ```
 **- for**
+* Döngüsü (Eleman Tabanlı / Sınırları Belli): Bir listenin, kelimenin veya belirli bir sayı aralığının (range) üzerinden sırayla geçer. Listenin sonuna geldiğinde otomatik olarak durur. "Adım sayısı" baştan bellidir.  
 
+```python
+# 1. FOR YÖNTEMİ: Listenin içindeki her bir elemanı ('n') sırayla kendisi yakalar.
+# Sayaç artırmaya veya listenin boyuna bakmaya gerek yoktur, otomatik biter.
+sum_for = 0
+for n in sayilar:
+    sum_for += n
+```
 
 **- while**
+* Döngüsü (Koşul Tabanlı / Sınırları Belirsiz): Başına yazılan şart doğru (True) olduğu sürece dönmeye devam eder. Döngünün bitmesi için içeride o şartı bozacak bir güncelleme (sayaç artırma gibi) yapılması şarttır, yoksa sonsuz döngüye girer.  
 
+```python
+# 2. WHILE YÖNTEMİ: Şarta bağlı çalışır. 
+# Elimizle bir 'i' indeksi (sayaç) kurup, bunu listenin boyundan küçük olduğu sürece döndürürüz.
+# İçeride 'i += 1' diyerek sayacı kendimiz artırmak zorundayız.
+sum_while = 0
+i = 0
+while i < len(sayilar):
+    sum_while += sayilar[i]
+    i += 1  # Bu satırı unutursak i hep 0 kalır ve program sonsuza kadar döner!
+```
 
 **- function**
+* Belirli bir görevi yerine getiren kod bloklarını bir çatı altında toplayarak, ihtiyaç duyulduğunda isimleriyle tekrar tekrar çağırabilmek için kullanılır.  
+* `def:` Fonksiyon tanımlama (define) kelimesidir.  
+* `Parametre / Argüman:` Fonksiyonun çalışması için dışarıdan gönderilen girdilerdir.  
+* `return:` Fonksiyonun işini bitirdikten sonra çağrıldığı yere ürettiği sonucu geri fırlatmasıdır. return satırına gelindiğinde o fonksiyonun çalışması anında durur.  
+* yazdigim function.py dosyasindan ornek vermek gerekirse:  
 
+```python
+# 1. PARAMETRE ALAN VE DEĞER DÖNDÜREN (RETURN) FONKSİYON
+def toplama(a, b):
+    return a + b  # Gelen iki sayıyı toplar ve çağrıldığı yere cevabı döner.
+
+# 2. ALGORİTMİK VE KOŞULLU FONKSİYON
+def palindrom_kontrolu(s):
+    s = str(s)
+    return s == s[::-1]  # stringi ters çevirip kendisiyle eşit mi diye bakar (True/False döner).
+
+# 3. ERKEN ÇIKIŞ (EARLY RETURN) VE GÜVENLİK KONTROLÜ
+def liste_ortalamasi(liste):
+    if not liste:
+        return None  # Boş liste geldiyse hata vermemesi için erkenden None dönüp fonksiyonu bitirir.
+    return sum(liste) / len(liste)
+```
 
 **- input alma**
 * Dışarıdan kullanıcı ile etkileşime girerek dinamik şekilde çalışması için terminal üzerinden veri toplamak amacıyla kullanılır.  
