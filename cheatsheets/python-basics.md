@@ -38,7 +38,7 @@ Programın belirli şartlara göre farklı kararlar vermesini ve farklı kod blo
 | `elif` | İlk şart yanlışsa, bakılacak diğer alternatif şartları sıralamak için kullanılır. |
 | `else` | Yukarıdaki şartların hiçbiri uymadığında, en son çare olarak çalışacak varsayılan kod bloğudur. |
 
-- sartlar kontrol edilirken `==`, `=!`, `and(&&)`, `or(||)` kullanilir.
+- sartlar kontrol edilirken `==`, `!=`, `and(&&)`, `or(||)` kullanilir.
 - calculator.py dosyamizdan asagidaki kod blogu ile orneklendirebiliriz.
 
 ```python
@@ -50,7 +50,7 @@ elif secim == '2' or secim == '-':
     sonuc = sayi1 - sayi2
     print("Fark:", sonuc)
 
-elif secim == '3' or seismic == '*':
+elif secim == '3' or secim == '*':
     sonuc = sayi1 * sayi2
     print("Carpim:", sonuc)
 

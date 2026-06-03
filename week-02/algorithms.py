@@ -106,7 +106,7 @@ if __name__ == "__main__":
 
     print("\nEn uzun kelimeyi bulma testleri:")
     kelimeler = ["elma", "armut", "mango", "karpuz", "kavun", "muz"]
-    print("En uzun(lar):", en_uzun_kelimeyi_bul(kelimeler))   # ['karpuz', 'kavun']
+    print("En uzun(lar):", en_uzun_kelimeyi_bul(kelimeler))   # ['karpuz']
     kelimeler2 = []
     print("Bos liste:", en_uzun_kelimeyi_bul(kelimeler2))     # []
     kelimeler3 = ["a", "ab", "abc", "abcd", "efgh", "xyz"]

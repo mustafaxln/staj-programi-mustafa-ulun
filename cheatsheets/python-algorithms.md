@@ -317,17 +317,6 @@ for k, v in frekans.items():
 - Yontem 2: `duplicate_temizle_dict` — `list(dict.fromkeys(liste))`.
 - Kazanim: iki yontem ayni sonucu verebilir; `sorted(set())` ise farkli amac (sirali tekrarsiz liste) — gorevde “ilk sirayi koru” deniyorsa kullanma.
 
-<br>
-
-### ▶️ Testte fark gosterme (`algorithms.py` `__main__`)
-
-```bash
-cd week-02
-python3 algorithms.py
-```
-
-> ℹ️ Cikti: `Slice sonrasi orijinal degisti mi?` vs `reverse() sonrasi orijinal`; `Dongu ve dict.fromkeys ayni mi?` vs `Ilk-sira yontemi ile sorted(set) ayni mi?`
-
 ---
 
 ## ⚠️ Sik yaptigin hatalar
