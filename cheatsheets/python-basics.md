@@ -19,25 +19,31 @@
 
 * sartlar kontrol edilirken `==`, `=!`, `and(&&)`, `or(||)` kullanilir.
 
-* calculator.py dosyamizdan asagidaki kod blogu ile orneklendirebiliriz.
-`if` secim `==` '1' `or` secim `==` '+':
+* calculator.py dosyamizdan asagidaki kod blogu ile orneklendirebiliriz.  
+
+```python
+if secim == '1' or secim == '+':
     sonuc = sayi1 + sayi2
     print("Toplam:", sonuc)
-`elif` secim `==` '2' `or` secim `==` '-':
+
+elif secim == '2' or secim == '-':
     sonuc = sayi1 - sayi2
     print("Fark:", sonuc)
-`elif` secim `==` '3' `or` secim `==` '*':
+
+elif secim == '3' or seismic == '*':
     sonuc = sayi1 * sayi2
     print("Carpim:", sonuc)
-`elif` secim`==`'4' `or` secim `==` '/':
-    `if` sayi2 `!=` 0:
+
+elif secim == '4' or secim == '/':
+    if sayi2 != 0:
         sonuc = sayi1 / sayi2
         print("Bolum:", sonuc)
-    `else:`
+    else:
         print("Bir sayi sifira bolunemez!")
-`else:`
-    print("Hatali secim yaptiniz!")
 
+else:
+    print("Hatali secim yaptiniz!")
+```
 **- for**
 
 
