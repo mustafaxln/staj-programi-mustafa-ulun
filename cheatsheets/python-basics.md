@@ -1,8 +1,12 @@
 **- degisken**
+* Bilgisayarın hafızasında geçici olarak veri saklamak ve bu verilere sonradan isimleriyle kolayca ulaşmak için kullanılır.  
+* Etiketli bir kutu gibi dusunebiliriz, kutunun ustune isim yazar icine de bir deger koyariz, daha sonra o degere  ulasmak istedigimizde o isimde ki kutuyu cagiririz.  
 
 
 **- veri tipleri**
-
+* Veri tipleri degiskenlerin tuttuklari degerin turunu belirler, bunu da etiketli kutularin icine koydugumuz esyanin (verinin) turunu belirtmek icin kullanilir gibi dusunebiliriz.  
+* Ornek olarak `int`,`float`,`str`,`bool` gosterilebilir.  
+* calculator.py  dosyamizda sayi1 ve sayi2 icin float kullandik mesela, bunun sebebi kullanici eger 10 sayisini 6 sayisina bolmek(/) isterse sonuc kusurlu bir sayi cikicaktir(`1.666`). Eğer `int` kullansaydık program bu küsuratı atıp yanlış sonuç verebilirdi veya hata çıkarabilirdi. `float` veri tipi sayesinde kullanıcının hem küsuratlı sayı girmesine izin verdik hem de bölme gibi işlemlerin sonucunun ondalıklı çıkmasını garanti altına aldık.
 
 **- if/else**
 
@@ -17,7 +21,20 @@
 
 
 **- input alma**
+* Dışarıdan kullanıcı ile etkileşime girerek dinamik şekilde çalışması için terminal üzerinden veri toplamak amacıyla kullanılır.  
+* `input()` fonksiyonu terminalde çalıştırıldığında programı durdurur ve kullanıcının klavyeden bir şey yazıp `Enter` tuşuna basmasını bekler.  
 
+
+python3 calculator.py  
+`Birinci sayiyi girin: 10`
+`Ikinci sayiyi girin: 20`
+Yapmak istediginiz islemi secin:
+1. Toplama (+)
+2. Cikarma (-)
+3. Carpma (*)
+4. Bolme (/)
+`Seciminiz (1/2/3/4): 3`
+Carpim: 200.0
 
 **- python dosyasi terminalden nasil calistirilir**
 Python dosyasını terminalden çalıştırmak için önce terminalden çalıştırmak istediğimiz dosyanın olduğu konuma gitmemiz lazım. Sonra terminalde şu komutu yollayarak Python dosyasını çalıştırabiliriz: python3 dosya_adi.py
