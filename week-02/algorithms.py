@@ -95,7 +95,7 @@ if __name__ == "__main__":
     sonuc_dongu = duplicate_temizle(tekrarli)
     sonuc_dict = duplicate_temizle_dict(tekrarli)
     sonuc_sirali_set = sorted(set(tekrarli))
-    print("Dongu + set (ilk gorulme sirasii):", sonuc_dongu)
+    print("Dongu + set (ilk gorulme sirasi):", sonuc_dongu)
     print("dict.fromkeys ile:", sonuc_dict)
     print("sorted(set()) ile (kucukten buyuge siralar):", sonuc_sirali_set)
     print("Orijinal liste degisti mi?:", tekrarli)
