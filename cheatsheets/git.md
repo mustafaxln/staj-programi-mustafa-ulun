@@ -116,6 +116,41 @@ git log --oneline    # tek satir ozet
 
 Merge commit'lerinde iki parent gorunur; hangi branch'in birlestigini anlamaya yarar.
 
+**Branch ve merge gecmisini grafikle gormek:**
+
+```bash
+git log --oneline --graph --all
+```
+
+| Bayrak | Ne yapar |
+|---|---|
+| `--oneline` | Her commit tek satir (kisa hash + mesaj) |
+| `--graph` | Branch dallanmasini ASCII cizgi ile gosterir (`*`, `\|`, `\|/`) |
+| `--all` | Tum branch'leri (yerel + uzak) birlikte listeler |
+
+Ornek cikti (hafta 03, merge ve PR sonrasi):
+
+```text
+* b38256f (HEAD -> feature/week-03-cli, origin/main, origin/feature/week-03-cli, origin/HEAD, main) week-03 tamamlandi butun dosyalariyla yuklendi
+*   d8f396a Merge conflict cozuldu
+|\  
+| * 3e9458e uygulamanin sonunda veda mesaji eklendi
+* | dff1cc3 uygulamanin sonunda veda mesaji eklendi
+* | 5976b11 uygulamanin sonunda veda mesaji eklendi
+* | 8e6791a Merge branch 'feature/week-03-cli'
+|\| 
+| * 9540dba uygulamaya gorev silme eklendi
+| * 769a43a uygulamaya gorev listeleme ozelligi eklendi
+| * e08034c uygulamaya gorev ekleme ozelligi eklendi
+| * 885e218 uygulamaya cikis ozelligi eklendi
+* | ab41734 Merge pull request #1 from mustafaxln/feature/week-03-cli
+|\| 
+```
+
+- `*  ` ile baslayan satirlar **merge commit**'idir (iki dal birlesti).
+- `|\` ve `| *` cizgileri hangi commit'in hangi branch'ten geldigini gosterir.
+- Parantez icindeki `(HEAD -> ..., origin/main, ...)` ayni commit'e isaret eden branch'leri gosterir; hepsi ayni noktadaysa yerel ve uzak branch'ler senkron demektir.
+
 ---
 
 ## branch

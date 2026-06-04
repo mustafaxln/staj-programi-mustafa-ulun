@@ -102,6 +102,28 @@ Program sonlandirildi
 - **Yerel merge:** `git checkout main` → `git merge feature/week-03-cli` ile feature'i main'e birlestirdim.
 - **Merge conflict:** Ayni satiri hem `main` hem feature'da farkli sekilde degistirince conflict cikti. Isaretleri (`<<<<<<<`, `=======`, `>>>>>>>`) temizleyip dogru metni birakarak `git add` + `git commit` ile tamamladim.
 - **Branch'i guncel tutma:** Conflict sonrasi `feature/week-03-cli` uzerinde `git merge main` (fast-forward) ile feature'i main ile hizaladim.
+- **Gecmisi grafikle okuma:** `git log --oneline --graph --all` ile tum branch'lerdeki commit'leri ve merge'leri tek ekranda gordum; PR merge (`ab41734`), yerel merge (`8e6791a`), conflict cozumu (`d8f396a`) ve feature commit'leri (`885e218` … `9540dba`) dallanma olarak netlesti.
+
+```bash
+git log --oneline --graph --all
+```
+
+```text
+* b38256f (HEAD -> feature/week-03-cli, origin/main, origin/feature/week-03-cli, origin/HEAD, main) week-03 tamamlandi butun dosyalariyla yuklendi
+*   d8f396a Merge conflict cozuldu
+|\  
+| * 3e9458e uygulamanin sonunda veda mesaji eklendi
+* | dff1cc3 uygulamanin sonunda veda mesaji eklendi
+* | 5976b11 uygulamanin sonunda veda mesaji eklendi
+* | 8e6791a Merge branch 'feature/week-03-cli'
+|\| 
+| * 9540dba uygulamaya gorev silme eklendi
+| * 769a43a uygulamaya gorev listeleme ozelligi eklendi
+| * e08034c uygulamaya gorev ekleme ozelligi eklendi
+| * 885e218 uygulamaya cikis ozelligi eklendi
+* | ab41734 Merge pull request #1 from mustafaxln/feature/week-03-cli
+|\| 
+```
 
 Conflict ornegi (veda mesaji satiri):
 
