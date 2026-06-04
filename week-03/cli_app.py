@@ -25,3 +25,19 @@ while on_off != 1:
             for gorev in gorevler:
                 print(f"{gorevler.index(gorev) + 1}. {gorev}")
             print("--------------------------------")
+    elif secim == 3:
+        if gorevler == []:
+            print("--------------------------------")
+            print("Gorevler yok")
+            print("--------------------------------")
+        else:
+            gorev = input("Silinecek gorevin numarasini girin: ")
+            if int(gorev) > len(gorevler):
+                print("--------------------------------")
+                print("Gorev bulunamadi")
+                print("--------------------------------")
+            else:
+                gorevler.pop(int(gorev) - 1)
+                print("--------------------------------")
+                print("Gorev silindi")
+                print("--------------------------------")
