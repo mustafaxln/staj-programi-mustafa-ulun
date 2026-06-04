@@ -41,5 +41,4 @@ while on_off != 1:
                 print("--------------------------------")
                 print("Gorev silindi")
                 print("--------------------------------")
-
 print("Program sonlandirildi")
