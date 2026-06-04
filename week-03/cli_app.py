@@ -1,4 +1,5 @@
 on_off = 0
+gorevler = []
 
 while on_off != 1:
     print("1. Gorev ekle")
@@ -8,4 +9,6 @@ while on_off != 1:
     secim = int (input("Seciminizi yapin: "))
     if secim == 4:
         on_off = 1
-    
+    elif secim == 1:
+        gorev = input("Gorevi girin: ")
+        gorevler.append(gorev)
