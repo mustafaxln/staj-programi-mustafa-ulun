@@ -13,3 +13,7 @@ JOIN order_items oi ON p.id = oi.product_id                     --order_items ta
 GROUP BY p.id, p.name                                         --tablolarin birlesmesi sonrasi id ve name'e gore grupluyoruz bunun sonucunda usb kablo 2 satir kitap 2 satir gibi bi sonuc elde ediyoruz
 ORDER BY toplam_adet DESC                                     --select sonrasi olusan tabloyu toplam adet'e gore azalan sekilde siraliyoruz
 LIMIT 1;                                                      --sadece 1 satir olsun diyoruz ve en cok satilan urunu buluyoruz
+
+-- 3. Toplam siparis tutari
+SELECT SUM(total_amount) AS toplam_siparis_tutari             --orders tablosundaki tum total_amount degerlerini topluyoruz ve sum'a da toplam_siparis_tutari diyoruz
+FROM orders;                                                  --sadece orders tablosunu kullaniyoruz join ve group by yok cunku tek bir genel toplam istiyoruz
