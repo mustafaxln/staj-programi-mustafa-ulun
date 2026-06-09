@@ -17,3 +17,9 @@ LIMIT 1;                                                      --sadece 1 satir o
 -- 3. Toplam siparis tutari
 SELECT SUM(total_amount) AS toplam_siparis_tutari             --orders tablosundaki tum total_amount degerlerini topluyoruz ve sum'a da toplam_siparis_tutari diyoruz
 FROM orders;                                                  --sadece orders tablosunu kullaniyoruz join ve group by yok cunku tek bir genel toplam istiyoruz
+
+-- 4. Hic satilmayan urunler
+SELECT p.name                                                --hic satilmayan urunlerin ismini gosteriyoruz
+FROM products p                                               --products tablosunu p diye kisalttik
+LEFT JOIN order_items oi ON p.id = oi.product_id                --order_items ile left join yaptik soldaki products tablosunun tum satirlari kalir
+WHERE oi.id IS NULL;                                          --order_items tarafinda eslesme yoksa yani hic satilmamissa o urunu listeliyoruz
