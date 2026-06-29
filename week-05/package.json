@@ -4,9 +4,9 @@
   "description": "- ne yaptim - nasil calistirilir - ne ogrendim - nerede takildim",
   "main": "index.js",
   "scripts": {
-  "build": "tsc",
-  "start": "node dist/hello.js",
-  "dev": "npm run build && npm run start"
+    "build": "tsc",
+    "faktoriyel": "npm run build && node dist/faktoriyel.js",
+    "asal": "npm run build && node dist/asal.js"
   },
   "keywords": [],
   "author": "",
