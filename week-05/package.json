@@ -6,7 +6,10 @@
   "scripts": {
     "build": "tsc",
     "faktoriyel": "npm run build && node dist/faktoriyel.js",
-    "asal": "npm run build && node dist/asal.js"
+    "asal": "npm run build && node dist/asal.js",
+    "duplicate": "npm run build && node dist/duplicate.js",
+    "palindrom": "npm run build && node dist/palindrom.js",
+    "frekans": "npm run build && node dist/frekans.js"
   },
   "keywords": [],
   "author": "",
